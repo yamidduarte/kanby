@@ -1,0 +1,153 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+
+.sidenav-container {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  background-color: #efddd9;
+  opacity: 100%;
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-out {
+  padding-top: 0.9em;
+  font-size: 16px;
+	-webkit-animation: fade-out 1s ease-out 10s both;
+	        animation: fade-out 1s ease-out 10s both;
+}
+
+.tridot {
+  transform: scale(1.2);
+  transform: translateY(-5%);
+}
+
+.toprightcorner {
+  color: #463a36;
+  padding-top: 0.9em;
+  font-size: 16px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+	-webkit-animation: fade-in 10s ease-in 14s both;
+	        animation: fade-in 10s ease-in 14s both;
+}
+
+.signin {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //transform: translateY(-1%);
+  //border: 3px solid #fff;
+}
+
+.logo {
+  margin-top: 1px;
+  line-height: 0;
+  letter-spacing: -2px;
+  font-size: 1.8em;
+  cursor: pointer;
+  outline: none;
+  font-family: Raleway;
+  font-weight: 550;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mat-drawer-side {
+  border: none;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  
+}
+
+.sidenav {
+  width: 200px;
+  font-family: sofia-pro;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+i {
+  font-style: normal;
+  font-size: 1.25em;
+  margin-right: 16px;
+}
+
+.avatar {
+  width: 1.75em;
+  border-radius: 50%;
+  margin: 0 10px 5px;
+}

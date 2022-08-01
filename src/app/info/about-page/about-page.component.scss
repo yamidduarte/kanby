@@ -1,0 +1,376 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+
+@media screen and (max-width: 1756px) {
+    .spacerclass1 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1614px) {
+    .spacerclass2 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .spacerclass3 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .spacerclass4 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1726px) {
+    .columnclass1 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .columnclass2 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .columnclass3 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .columnclass4 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1726px) {
+    .columnclass5 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .columnclass6 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .columnclass7 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .columnclass8 {
+        display: none !important;
+    }
+}
+
+#bodygradient {
+    min-height: 80%;
+    align-items: center;
+    background: linear-gradient(#efddd9, #fff);
+    position: absolute;
+    top: 60px;
+    height: 90%;
+    width: 100%;
+    //border: 5px solid #f0f;
+}
+
+#imagebox {
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    top: -50px;
+    z-index: 8;
+    direction: ltr;
+    //float: right;
+    //display: flex;
+    //flex-wrap: wrap;
+    //align-content: Right;
+    //transform: translateY(-10%);
+    //width: 50%;
+    //border: 1px solid #f0f;
+}
+#column1 {
+    width: 40%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(0, 140, 255);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column2 {
+    width: 40%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(7, 255, 110);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column3 {
+    width: 12%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(255, 208, 0);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column4 {
+    width: 12%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(255, 0, 0);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column5 {
+    width: 40%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(0, 140, 255);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column6 {
+    width: 40%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(7, 255, 110);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column7 {
+    width: 12%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(255, 208, 0);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#column8 {
+    width: 12%;
+    height: 100%;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //background-color: rgb(255, 0, 0);
+    //border: 5px solid #f0f;
+    //background: linear-gradient(#00ff22, #fff);
+}
+#content {
+    position: relative;
+    top: 0%;
+    left: 5%;
+    width: 90%;
+    min-width: 900px;
+    overflow: visible;
+    display: flex;
+    z-index: 1;
+    //max-height: 80%;
+    //max-width: 1110px;
+    //border: 2px solid rgb(0, 0, 0);
+    //background: linear-gradient(#00ff22, #fff);
+}
+#subcontent {
+    position: relative;
+    display: inline-block;
+    //justify-content: space-between;
+    //min-width: 400px;
+    overflow: visible;
+    z-index: 1;
+    //max-height: 100%;
+    //max-width: 1110px;
+    //border: 6px solid rgb(255, 230, 0);
+    //background: linear-gradient(#00ff22, #fff);
+}
+#spacer1 {
+    //background-color: rgb(255, 196, 0);
+    position: relative;
+    overflow: visible;
+    width:100%;
+    height:4%;
+    display: block;
+    z-index: 1;
+    float: left;
+    //border: 2px solid rgb(255, 0, 0);
+}
+#spacer2 {
+    //background-color: rgb(255, 196, 0);
+    position: relative;
+    overflow: visible;
+    width:100%;
+    height:4%;
+    display: block;
+    z-index: 1;
+    float: left;
+    //border: 2px solid rgb(255, 0, 0);
+}
+#spacer3 {
+    //background-color: rgb(255, 196, 0);
+    position: relative;
+    overflow: visible;
+    width:100%;
+    height:4%;
+    display: block;
+    z-index: 1;
+    float: left;
+    //border: 2px solid rgb(255, 0, 0);
+}
+#spacer4 {
+    //background-color: rgb(255, 196, 0);
+    position: relative;
+    overflow: visible;
+    width:100%;
+    height:2%;
+    display: block;
+    z-index: 1;
+    float: left;
+    //border: 2px solid rgb(255, 0, 0);
+}
+#welcometitle {
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+    left: 2%;
+    z-index: 11;
+    width: 60.33%;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    //transform: translateY(50%);
+    //border: 2px solid rgb(0, 255, 85);
+    //background: linear-gradient(#00ff22, #fff);
+}
+#welcome {
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+    left: 2%;
+    z-index: 11;
+    width: 56.33%;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateY(6%);
+    //border: 2px solid rgb(0, 255, 85);
+    //background: linear-gradient(#00ff22, #fff);
+}
+h1 { //Login Caption
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+    font-size: 36px;
+    text-align: left;
+    font-family: Raleway;
+    line-height: 01em;
+    letter-spacing: -2px;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h2 { // Primary Paragraph
+    //
+   //transform: translate(0%, 20%);
+    //line-height: 170%;
+    font-size: 1.25em;
+}
+
+h3 { // Button text color and dimensions
+    //font-weight: 500;
+    color: rgb(107, 107, 107);
+   //transform: translate(0%, 20%);
+    line-height: 100%;
+    font-size: 1.35em;
+}
+
+.loginlite {
+    position: relative;
+    display: block;
+    z-index: 11;
+    float: left;
+    width: 60.33%;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateY(100%);
+    //border: 2px solid rgb(0, 255, 85);
+}
+
+.externallink { // THE TWO BUTTONS
+    img {
+        // Google Logo Dimensions
+       width: 1.6em;
+       transform: translate(-30%, 30%);
+    }
+     // Button dimensions
+    //padding: 1px 40px;
+    position: relative;
+    display: inline-block;
+    //width: 290px;
+    width: 100%;
+    transform: translateY(60%);
+}
+#buttons {
+    position: relative;
+    display: inline-block;
+    //width: 650px;
+    left: 2%;
+    width: 60%;
+    //border: 5px solid rgb(0, 255, 85);
+}
+#button1 {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+            //border: 20px solid rgb(0, 255, 85);
+}
+#buttonspacer {
+    position: relative;
+    display: inline-block;
+    width: 3%;
+        //border: 20px solid rgb(0, 255, 85);
+}
+#button2 {
+    position: relative;
+    display: inline-block;
+    width: 43%;
+        //border: 20px solid rgb(0, 255, 85);
+}
+
+.link{
+    color: rgb(17, 120, 255);
+}
+
+#footer {
+    position: fixed;
+    left: 45%;
+    bottom: 1em;
+    clear: both;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

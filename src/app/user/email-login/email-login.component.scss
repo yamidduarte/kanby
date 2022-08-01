@@ -1,0 +1,180 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+
+button {
+    img {
+        // Google Logo Dimensions
+        width: 1.1em;
+        transform: translate(-15%, 20%);
+    }
+     // Button dimensions
+    padding: 1px 26px;
+    flex-direction: column;
+    transform: translate(0%, 20%);
+
+    //border: 5px solid #ccc;
+}
+
+.newbutton {
+    img {
+        // Emoji is used instead
+        width: 1.1em;
+        transform: translate(-15%, 20%);
+    }
+     // Button dimensions
+    padding: 1px 28px;
+    flex-direction: column;
+    transform: scale(1.02);
+    //transform: translate(0%, 20%);
+}
+h4 { // Button text color and dimensions
+    //font-weight: 500;
+    color: rgb(107, 107, 107);
+    transform: translate(0%, 36%);
+    line-height: 100%;
+    font-size: 1.35em;
+
+}
+.returningbutton {
+     // Button dimensions
+     font-weight: 500;
+     color: rgb(107, 107, 107);
+     transform: translate(0%, 20%);
+     line-height: 100%;
+     font-size: 1em;
+    padding: 8px 24px;
+    flex-direction: column;
+    //transform: translate(0%, 20%);
+}
+h3 { // Button text color and dimensions
+    font-weight: 500;
+    color: rgb(107, 107, 107);
+    transform: translate(0%, 20%);
+    line-height: 100%;
+    font-size: 1.35em;
+}
+.experimental{
+    border: none;
+    //border: 20px solid rgb(0, 255, 85);
+}
+.container { // Create Account
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border: none;
+    // border: 1px solid #ff16c5;
+    color: rgb(0, 0, 0);  // some button text (you must be logged in)
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+
+}
+.emailfield{
+    //color: rgb(136, 136, 136);
+    //background-color: #efddd9;
+    font-size: 18px;
+    //border: 2px solid rgb(255, 0, 255);
+}
+
+
+.cardtainer { // Email area card
+    border-radius: 7px;  // Rounded border
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    width: 20%;
+    border: none;
+    // border: 3px solid #aa16ff;
+    color: rgb(0, 110, 255);
+    font-weight: bold;
+    font-style: italic;
+    //box-shadow: 4px 5px #ebebeb;
+    box-shadow:
+    0 0 6px 0px rgb(146, 146, 146),  /* inner white */
+    //0 0 10px 6px #f0f, /* middle magenta */
+    //0 0 14px 9px #0ff; /* outer cyan */
+    //box-shadow:
+    //0 0 60px 30px #fff,  /* inner white */
+    //0 0 100px 60px #f0f, /* middle magenta */
+    //0 0 140px 90px #0ff; /* outer cyan */
+}
+
+.inputstyle { // Applied on EMAIL input
+    display: block;
+    background: #f5e9e7;
+    //background: #fffaf4;
+    border-radius: 5px;  // Rounded border
+    margin-top: 2em;
+    font-style: italic;
+    font-size: 18px;
+    text-indent: 0.4em;
+    height: 3.23em;
+    // margin-right: auto;
+    // width: 20%;
+    // border: 1px solid #d6d6d6;
+    border: none;
+    color: #05787D;
+    // font-weight: bold;
+    // font-style: italic;
+    // font-size: 12px;
+	-webkit-box-shadow: inset 2px 2px 2px rgb(139, 139, 139);
+	-moz-box-shadow: inset 2px 2px 2px rgb(139, 139, 139);
+	box-shadow: inset 2px 2px 3px rgb(139, 139, 139);
+}
+
+.inputstylepw { // Applied on PASSWORD input
+    display: block;
+    background: #f5e9e7;
+    //background: #fffaf4;
+    border-radius: 5px;  // Rounded border
+    margin-top: 2em;
+    font-style: italic;
+    font-size: 18px;
+    text-indent: 0.4em;
+    height: 3.1em;
+    // margin-right: auto;
+    // width: 20%;
+    // border: 1px solid #d6d6d6;
+    border: none;
+    color: #05787D;
+    // font-weight: bold;
+    // font-style: italic;
+    // font-size: 12px;
+	-webkit-box-shadow: inset 2px 2px 2px rgb(139, 139, 139);
+	-moz-box-shadow: inset 2px 2px 2px rgb(139, 139, 139);
+	box-shadow: inset 2px 2px 3px rgb(139, 139, 139);
+}
+
+.ebutton { // Email area buttons
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    // Button dimensions
+    // padding: 1px 26px;
+    // flex-direction: column;
+    //transform: translate(0%, 20%);
+}
+
+h1 { //Login Caption
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 56px;
+    text-align: center;
+}
+
+:host {
+    text-align: center;
+}
+
+.logout {
+    padding-top: 5em;
+}

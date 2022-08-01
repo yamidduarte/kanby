@@ -1,0 +1,127 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<mat-card class="cardtainer">
+  
+    <div *ngIf="isLogin" class="container">
+      <h3>Sign in to Kanby</h3>
+    </div>
+
+    <div *ngIf="isSignup" class="container">
+      <h3>Create New Account</h3>
+  
+      <button mat-stroked-button (click)="changeType('login')" class = "returningbutton">
+        Returning user?
+      </button>
+    </div>
+  
+    <div *ngIf="isPasswordReset" class="container">
+      <h3>Reset Password</h3>
+      <button size="small" mat-button (click)="changeType('login')" class = "ebutton">Back</button>
+    </div>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="experimental">
+      <mat-form-field [color]="email?.valid && 'accent'" class="inputstyle">
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          placeholder="Email"
+          autocomplete="off" 
+          class="emailfield"         
+        />
+  
+        <mat-error *ngIf="email?.invalid && email?.dirty">
+          You must enter a valid email address
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field [color]="email?.valid && 'accent'" *ngIf="!isPasswordReset" class="inputstylepw">
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+        />
+  
+        <mat-error *ngIf="password?.invalid && password?.dirty">
+          Password must be at least 6 characters long
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field
+        [color]="passwordDoesMatch ? 'accent' : 'warn'"
+        *ngIf="isSignup"
+        class="inputstyle"
+      >
+        <input
+          matInput
+          formControlName="passwordConfirm"
+          type="password"
+          placeholder="Confirm password"
+          autocomplete="off"
+        />
+  
+        <mat-error *ngIf="passwordConfirm?.dirty && !passwordDoesMatch">
+          Password does not match
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-error class="server-error">{{ serverMessage }}</mat-error>
+  
+      <button
+        *ngIf="isPasswordReset"
+        mat-stroked-button
+        type="submit"
+        [disabled]="loading"
+        class = "ebutton"
+      >
+        Send Reset Email
+      </button>
+  
+      <button
+        *ngIf="!isPasswordReset"
+        mat-raised-button
+        color="accent"
+        type="submit"
+        [disabled]="form.invalid || !passwordDoesMatch || loading"
+        class = "ebutton"
+      >
+        Submit
+      </button>
+    </form>
+  
+    <button
+      mat-button
+      *ngIf="isLogin && !isPasswordReset"
+      (click)="changeType('reset')"
+      class = "ebutton"
+    >
+      Forgot password?
+    </button>
+    <br />
+</mat-card>
+
+
+
+
+<br />
+
+<button
+mat-raised-button
+(click)="changeType('signup')"
+class = "newbutton"
+>
+<h4>🌿 Create New Account
+</h4>
+</button>

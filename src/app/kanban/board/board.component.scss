@@ -1,0 +1,76 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+
+.backcanvas {
+  //background: linear-gradient(#efddd9, #fff);
+  //background: linear-gradient(#fff,#efddd9);
+  // meaningless
+  border: none;
+}
+
+.tasks { 
+  margin: 5px 0px 0px 0px;
+  color: #463a36;
+  font-size: 1.2em;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.titleboard {
+  color: #000000;
+  font-size: 1.5em;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.outer-card {
+    // Top Right Bottom Left
+    margin: 0px 20px 10px 0px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 8px;
+    //background: #fff6f1;
+    font-smooth: always;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(#e9cbc4, rgb(236, 224, 224));
+    border-radius: 6px;  // Rounded border
+  }
+  
+  .inner-card {
+    margin: 0px 0px 10px 0px; // Card margin
+      //cursor: cell;
+    cursor: grab;
+
+  }
+
+  .cdk-drag-animating {
+    transition: transform 300ms ease;
+  }
+  
+  .tasks.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 300ms ease;
+  }
+
+.cdk-drag-placeholder {
+  opacity: 0.5;
+}
+
+.blue { background: #e9cabb; color: rgb(0, 0, 0); }
+.green { background: #05787d; color: rgb(255, 255, 255);  }
+.yellow { background: #bcd8cc; color: rgb(0, 0, 0); }
+.purple { background: #efc809; color: rgb(0, 0, 0); }
+.red { background: #ef8e6d; color: rgb(0, 0, 0); }
+.gray { background: gray; color: rgb(0, 0, 0); text-decoration: line-through; }
+

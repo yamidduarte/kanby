@@ -1,0 +1,55 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<main class="maincanvas">
+    <!---- WE ONLY WANT TO SHOW THIS BUTTON IF THE USER IS NOT LOGGED IN, so we use ! below -->
+    <!---- WE WANT THE value TRUE if the user is NOT logged in, so we use ! below -->
+    <div *ngIf="!(afAuth.authState | async)" class="container">
+
+        &nbsp;
+        <h1> </h1>
+        &nbsp;
+        <p></p>
+        
+        <app-email-login></app-email-login>
+
+        <br/>
+        <p> </p>
+
+        <button mat-raised-button appGoogleSignin>
+            <h3><img src="/assets/google-logo.svg" />  Continue with Google
+            </h3>
+        </button>
+        
+        
+
+        
+
+
+    </div>
+
+
+    <!---- NOW if the user IS logged in, we can show this other div with different details-->
+    <!---- In other words, we're creating a bare minimum user profile here -->
+    <div *ngIf="afAuth.authState | async as user" class ="afterloginstatus" routerLink="/kanban">
+        <p>
+            Logging in as <strong>{{ user.email }}</strong> ✔️
+        </p>
+        <!---<button mat-stroked-button (click)="afAuth.signOut()" class="loutbtn">Logout</button>--->
+    </div>
+    <div class="afterlogin">
+        <!---REDIRECTING TO KANBAN NOW-->
+        <!--<a mat-button routerLink="/kanban" class="albutton">🍱 Go to my Kanban board</a>--->
+
+    </div>
+
+</main>

@@ -1,0 +1,70 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+
+.maincanvas {
+    background: linear-gradient(#efddd9, #fff);
+}
+
+
+button {
+    img {
+        // Google Logo Dimensions
+        width: 1.1em;
+        transform: translate(-15%, 20%);
+    }
+     // Button dimensions
+    padding: 1px 26px;
+    flex-direction: column;
+    transform: translate(0%, 20%);
+}
+h5 { // Pushing the stubborn "OR" line down
+    // display: block;
+    font-size: 16px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+h3 { // Button text color and dimensions
+    //font-weight: 500;
+    color: rgb(107, 107, 107);
+    transform: translate(0%, 20%);
+    line-height: 100%;
+    font-size: 1.35em;
+}
+.container { // Paragraph below
+    color: rgb(122, 122, 122);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+}
+h1 { //Login Caption
+    color: rgb(59, 59, 59);
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+:host {
+    text-align: center;
+}
+
+.afterloginstatus {
+    padding-top: 2em;
+    //text-align: left;
+}
+
+.afterlogin {
+    // Button dimensions
+    padding-top: 3em;
+    color: rgb(59, 59, 59);
+    font-weight: bold;
+    text-align: center;
+   transform: translate(0%, 20%);
+}

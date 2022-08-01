@@ -1,0 +1,50 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<mat-card class="outer-card">
+  <mat-card-header>
+    <!-- Slot for the handle -->
+    <ng-content></ng-content>
+    <mat-card-title class="titleboard">
+      {{ board.title }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      <!-- {{ board.id }} -->
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <div
+    class="tasks"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="taskDrop($event)"
+  >
+    <div
+      class="inner-card"
+      cdkDrag
+      *ngFor="let task of board.tasks; let i = index"
+      (click)="openDialog(task, i)"
+    >
+      <mat-card [ngClass]="task.label"> {{ task.description }} </mat-card>
+        <!-- The special thing about the TASK is that they can have different colors.-->
+        <!-- One way to achieve that is to use the ngClass directive, which is able to -->
+        <!-- use some dynamic data to apply a CSS class to an element, based on the value of that dynamic data -->
+    </div>
+      
+    <button mat-stroked-button (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <app-delete-button (delete)="handleDelete()"></app-delete-button>
+
+  </div>
+</mat-card>

@@ -1,0 +1,46 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<div
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  class="boards"
+  id="board-list"
+  (cdkDropListDropped)="drop($event)"
+  [ngStyle]="{'background-image': evalUrl()}" 
+>
+ <!--[ngStyle]="{'background-image': getUrl()}"-->
+<app-board cdkDrag *ngFor="let board of boards" [board]="board">
+  <mat-icon cdkDragHandle class="handle">wysiwyg</mat-icon>
+  <!---wysiwyg-->
+</app-board>
+
+<div class="board-button">
+  <button
+    mat-raised-button
+    class="newboard"
+    color="accent"
+    cdkDragDisabled
+    (click)="openBoardDialog()"
+  >
+  🌱 New Board
+  </button>
+</div>
+</div>
+<div class="fade-in">
+  <label class="switch">
+    <mat-slide-toggle [(ngModel)]="enableSwitch" (change)="update()" color="primary">
+    Live Background
+    </mat-slide-toggle>
+  </label>
+</div>
+

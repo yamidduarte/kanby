@@ -1,0 +1,25 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<button
+  mat-button
+  color="warn"
+  (click)="canDelete ? deleteBoard() : prepareForDelete()"
+  class="button0"
+>
+  <mat-icon>delete</mat-icon>
+  <span *ngIf="canDelete" class="button1"> Delete?</span>
+</button>
+
+<button *ngIf="canDelete" mat-button (click)="cancel()" class="button2"> 
+  Cancel
+</button>

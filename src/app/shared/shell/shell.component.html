@@ -1,0 +1,94 @@
+<! ---
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+--->
+<mat-sidenav-container class="sidenav-container">
+
+  <!-- SIDENAV -->
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar> <!-- "Left" Invisible Menu slides out on small screens-->
+    <mat-nav-list>
+     
+      <a mat-list-item routerLink="/login" *ngIf="!(afAuth.authState | async)" (click)="drawer.close()">🔑 Sign in</a>
+      <a mat-list-item routerLink="/kanban" *ngIf="canGoToBoard()" (click)="drawer.close()">🍱 My Board</a>
+      <a mat-list-item routerLink="/about" (click)="drawer.close()">🌲 About Kanby</a>
+      <a mat-list-item href="https://github.com/yamidduarte/kanby" target="_blank" (click)="drawer.close()">✔️ Source Code</a>
+      <a mat-list-item *ngIf="afAuth.authState | async as user" (click)="afAuth.signOut()" routerLink="/" (click)="drawer.close()">🔑 Sign Out</a>
+    </mat-nav-list> <!-- ^^^^^ "Left" Invisible Menu slides out on small screens ^^^^^^^^^^-->
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+  <!-- TOP TOOLBAR-->
+
+    <mat-toolbar class="header">
+      <button 
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+
+
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <img
+        src="/assets/plant.svg"
+        alt="kanby"
+        height="48"
+        width="50" />
+      <span class="logo" routerLink="/"> Kanby</span>
+
+      <span class="fill-space"></span>
+      <div *ngIf="!(isHandset$ | async)">
+
+        <a mat-button *ngIf="!(afAuth.authState | async)" routerLink="/login" class="signin">🔑 Sign in</a>
+        <div *ngIf="afAuth.authState | async as user" class="fade-out">
+        <!----<div *ngIf="afAuth.authState | async as user" class="toprightcorner">--->
+          <p>
+              Logged in as <strong>{{ user.email }}</strong> ✔️
+          </p>
+        </div>
+        
+      </div>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="tridot">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item *ngIf="canGoToBoard()" routerLink="/kanban">
+          <i>🍱</i>
+          <span> My Board</span>
+        </a>
+        <a mat-menu-item routerLink="/about">
+          <i>🌲</i>
+          <span> About Kanby</span>
+        </a>
+        <a mat-menu-item href="https://github.com/yamidduarte/kanby" target="_blank">
+          <i>✔️</i>
+          <span>Source Code</span>
+        </a>
+        <a mat-menu-item *ngIf="afAuth.authState | async as user" (click)="afAuth.signOut()" routerLink="/" class="loutbtn">
+          <i>🔑</i>
+          <span>Logout</span>
+        </a>
+      </mat-menu>
+    </mat-toolbar>
+
+    <!-- TRANSCLUSION -->
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
