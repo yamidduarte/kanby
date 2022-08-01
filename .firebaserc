@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanby01": {
+      "hosting": {
+        "kanby": [
+          "kanby01"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanby01"
+  }
+}

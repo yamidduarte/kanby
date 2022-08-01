@@ -1,0 +1,27 @@
+// KANBY Progressive Web App
+// v0.85.0 alpha build 3 RC
+// Alpha development version
+// Kanby.io
+// Yamid Duarte
+// yamidduarte.com
+// github.com/yamidduarte
+// bitbucket.org/yamidduarte
+// ---------------------------
+// Released under MIT License
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jasmine"
+    ]
+  },
+  "files": [
+    "src/test.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
+}

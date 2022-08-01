@@ -1,1 +1,6 @@
 # kanby
+
+Project repository
+
+ 
+ 
